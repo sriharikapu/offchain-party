@@ -2,6 +2,10 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">= 10",
+    "npm": ">= 6"
+  },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "drizzle": "^1.2.4",
