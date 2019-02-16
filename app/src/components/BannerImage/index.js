@@ -5,10 +5,9 @@ import styled from 'styled-components';
 const BannerImage = styled.div`
   width: 337px;
   height: 202px;
-  left: 18px;
-  top: 109px;
   background: #202020;
   position: relative;
+  margin-bottom: 50px;
 `;
 
 const ImageTitle = styled.strong`

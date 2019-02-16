@@ -7,6 +7,7 @@ import Layout from '../components/Layout';
 import BannerImage from '../components/BannerImage';
 import AuctionWidget from '../components/AuctionWidget';
 import Web3Widget from '../components/Web3Widget';
+import Description from '../components/Description';
 
 const Experience = () => {
   const [loggedIn, setLoggedIn] = useState(true);
@@ -23,6 +24,7 @@ const Experience = () => {
         <Layout>
           <BannerImage />
           {renderActionWidget()}
+          <Description />
         </Layout>
       </LoadingContainer>
     </DrizzleProvider>

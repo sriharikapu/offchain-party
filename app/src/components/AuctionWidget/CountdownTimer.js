@@ -26,7 +26,7 @@ export default function AuctionEndCountDown() {
   return (
     <Countdown
       date={
-        new Date('Wed Dec 26 2018 23:59:59 GMT-0800 (Pacific Standard Time)')
+        new Date('Wed Feb 26 2019 23:59:59 GMT-0800 (Pacific Standard Time)')
       }
       renderer={renderer}
     />
