@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +11,11 @@ body {
   background: black;
   color: white;
   letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+body * {
+  font-weight: 700;
 }
 
 a {
