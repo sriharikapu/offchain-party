@@ -1,5 +1,5 @@
 Input example:
 
 ```js
-<Input />
+<Input type="email" value="email@gmail.com" />
 ```
