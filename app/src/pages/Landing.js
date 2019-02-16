@@ -1,14 +1,22 @@
 import React from 'react';
+import Layout from '../components/Layout';
+import styled from 'styled-components';
 
-import { drizzleConnect } from 'drizzle-react';
+const Slogan = styled.div`
+  text-align: center;
+  max-width: 70em;
+  margin: 0 auto;
+`;
 
-const Landing = ({ accounts }) => <div>test</div>;
+const Landing = () => (
+  <div>
+    <Layout>
+      <Slogan>
+        Support meaningful art
+        <br /> Collect unique experiences
+      </Slogan>
+    </Layout>
+  </div>
+);
 
-const mapStateToProps = state => {
-  return {
-    accounts: state.accounts,
-    drizzleStatus: state.drizzleStatus
-  };
-};
-
-export default drizzleConnect(Landing, mapStateToProps);
+export default Landing;

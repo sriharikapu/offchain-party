@@ -9,13 +9,14 @@ import Landing from './pages/Landing';
 class App extends Component {
   render() {
     return (
-      <DrizzleProvider options={drizzleOptions}>
-        <LoadingContainer>
-          <Router>
-            <Landing path="/" />
-          </Router>
-        </LoadingContainer>
-      </DrizzleProvider>
+      <Router>
+        <Landing path="/" />
+        <div path="/1">
+          <DrizzleProvider options={drizzleOptions}>
+            <LoadingContainer />
+          </DrizzleProvider>
+        </div>
+      </Router>
     );
   }
 }
