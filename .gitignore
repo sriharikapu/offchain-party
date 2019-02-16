@@ -1,4 +1,5 @@
 node_modules
 build
 app/src/contracts
+app/public/demo-assets
 .DS_Store
