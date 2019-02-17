@@ -47,14 +47,35 @@ const BidButton = styled.button`
   cursor: pointer;
 `;
 
-const BidContainer = () => (
-  <InputControl>
-    <InputWrapper>
-      <BidInput autoFocus />
-      <Denomination>ETH</Denomination>
-    </InputWrapper>
-    <BidButton>BID</BidButton>
-  </InputControl>
-);
+export default class BidContainer extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      bid: 0
+    };
+  }
 
-export default BidContainer;
+  updateBidState(e) {
+    this.setState({ bid: e.target.value });
+  }
+
+  submitBid() {
+    this.props.updateCurrentBid(this.state.bid);
+  }
+
+  render() {
+    return (
+      <InputControl>
+        <InputWrapper>
+          <BidInput
+            onChange={this.updateBidState.bind(this)}
+            value={this.state.bid}
+            autoFocus
+          />
+          <Denomination>ETH</Denomination>
+        </InputWrapper>
+        <BidButton onClick={this.submitBid.bind(this)}>BID</BidButton>
+      </InputControl>
+    );
+  }
+}

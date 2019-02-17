@@ -3,7 +3,6 @@ import Figure from '../../assets/crackadoom-figure.svg';
 import styled from 'styled-components';
 
 const BannerImage = styled.div`
-  width: 337px;
   height: 202px;
   background: #202020;
   position: relative;
