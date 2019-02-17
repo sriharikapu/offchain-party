@@ -12,6 +12,7 @@
   },
   "author": "we, the ppl",
   "dependencies": {
+    "bnc-assist": "^0.3.4",
     "openzeppelin-solidity": "2.1.2",
     "truffle": "5.0.4"
   }
