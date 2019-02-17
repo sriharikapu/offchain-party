@@ -1,7 +1,8 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/ocp-logo.svg';
 import styled from 'styled-components';
+import { Link } from '@reach/router';
 
+import { ReactComponent as Logo } from '../../assets/ocp-logo.svg';
 const Header = styled.div`
   margin-bottom: 3em;
 `;
@@ -14,7 +15,9 @@ const Container = styled.div`
 const Layout = ({ children }) => (
   <div>
     <Header>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
     </Header>
     <Container>{children}</Container>
   </div>

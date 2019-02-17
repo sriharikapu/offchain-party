@@ -15,8 +15,8 @@ const Container = styled.div``;
 
 const Experience = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-  const [auctionEnded, setAuctionEnded] = useState(true);
-  const [isTokenOwner, setTokenOwner] = useState(true);
+  const [auctionEnded, setAuctionEnded] = useState(false);
+  const [isTokenOwner, setTokenOwner] = useState(false);
   function renderActionWidget() {
     if (loggedIn && !auctionEnded) {
       return (

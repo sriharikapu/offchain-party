@@ -50,7 +50,7 @@ const BidButton = styled.button`
 const BidContainer = () => (
   <InputControl>
     <InputWrapper>
-      <BidInput />
+      <BidInput autoFocus />
       <Denomination>ETH</Denomination>
     </InputWrapper>
     <BidButton>BID</BidButton>
