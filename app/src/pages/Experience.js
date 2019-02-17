@@ -12,12 +12,17 @@ import Web3Widget from '../components/Web3Widget';
 import Description from '../components/Description';
 
 const Experience = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [auctionEnded, setAuctionEnded] = useState(true);
+  const [isTokenOwner, setTokenOwner] = useState(true);
   function renderActionWidget() {
-    if (loggedIn) {
+    if (loggedIn && !auctionEnded) {
       return <AuctionWidget />;
     }
-    return <CrackadoomPlayer />
+    if (loggedIn && auctionEnded && isTokenOwner) {
+      return <CrackadoomPlayer />;
+    }
+    return <Web3Widget />;
   }
 
   return (
