@@ -7,7 +7,7 @@ const BannerImage = styled.div`
   height: 202px;
   background: #202020;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 `;
 
 const ImageTitle = styled.strong`
