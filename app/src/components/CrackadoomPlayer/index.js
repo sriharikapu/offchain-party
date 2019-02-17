@@ -14,12 +14,11 @@ const Title = styled.div`
   flex-grow: 1;
 `;
 
-console.log(process.env.REACT_APP_TRACK1);
-
 const track1 = process.env.REACT_APP_TRACK1;
 const track2 = process.env.REACT_APP_TRACK2;
 const track3 = process.env.REACT_APP_TRACK3;
 const track4 = process.env.REACT_APP_TRACK4;
+const coverArt = process.env.REACT_APP_COVER_ART;
 
 const playlist = [
   { title: 'Yoho', audio: track1 },
@@ -42,8 +41,13 @@ const TrackPlayer = withCustomAudio(props => {
   );
 });
 
+const CoverArt = styled.img`
+  max-width: 100%;
+`;
+
 const CrackadoomPlayer = () => (
   <div>
+    <CoverArt src={coverArt} />
     {playlist.map(track => (
       <TrackPlayer
         key={track.title}
