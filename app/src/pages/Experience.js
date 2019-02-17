@@ -37,6 +37,7 @@ const Experience = ({ Auction721, web3 }) => {
   const [auctionEnded, setAuctionEnded] = useState(false);
   const [isTokenOwner, setTokenOwner] = useState(false);
   function renderActionWidget() {
+    // AUCTION WIDGET - Auction live and user is logged in
     if (loggedIn && !auctionEnded) {
       return (
         <Container>
@@ -45,9 +46,13 @@ const Experience = ({ Auction721, web3 }) => {
         </Container>
       );
     }
+
+    // AUDIO PLAYER - User is logged in, auction is over and the user is the token owner
     if (loggedIn && auctionEnded && isTokenOwner) {
       return <CrackadoomPlayer />;
     }
+
+    // WEB3 Login - User is not logged in
     return (
       <Container>
         <BannerImage />
