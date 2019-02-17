@@ -1,22 +1,20 @@
-import SimpleStorage from "./contracts/SimpleStorage.json";
-import ComplexStorage from "./contracts/ComplexStorage.json";
-import TutorialToken from "./contracts/TutorialToken.json";
+import Auction721 from './contracts/Auction721.json';
 
 const options = {
   web3: {
     block: false,
     fallback: {
-      type: "ws",
-      url: "ws://127.0.0.1:9545",
-    },
+      type: 'ws',
+      url: 'ws://127.0.0.1:9545'
+    }
   },
-  contracts: [SimpleStorage, ComplexStorage, TutorialToken],
+  contracts: [Auction721],
   events: {
-    SimpleStorage: ["StorageSet"],
+    // SimpleStorage: ["StorageSet"],
   },
   polls: {
-    accounts: 1500,
-  },
+    accounts: 1500
+  }
 };
 
 export default options;

@@ -1,9 +1,8 @@
-const SimpleStorage = artifacts.require("SimpleStorage");
-const TutorialToken = artifacts.require("TutorialToken");
-const ComplexStorage = artifacts.require("ComplexStorage");
+// const ConvertLib = artifacts.require("ConvertLib");
+const Auction721 = artifacts.require("Auction721");
 
 module.exports = function(deployer) {
-  deployer.deploy(SimpleStorage);
-  deployer.deploy(TutorialToken);
-  deployer.deploy(ComplexStorage);
+  // deployer.deploy(ConvertLib);
+  // deployer.link(ConvertLib, Auction721);
+  deployer.deploy(Auction721);
 };

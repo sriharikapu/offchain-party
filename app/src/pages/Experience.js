@@ -11,30 +11,37 @@ import AuctionWidget from '../components/AuctionWidget';
 import Web3Widget from '../components/Web3Widget';
 import Description from '../components/Description';
 
+const Container = styled.div``;
+
 const Experience = () => {
   const [loggedIn, setLoggedIn] = useState(true);
   const [auctionEnded, setAuctionEnded] = useState(true);
   const [isTokenOwner, setTokenOwner] = useState(true);
   function renderActionWidget() {
     if (loggedIn && !auctionEnded) {
-      return <AuctionWidget />;
+      return (
+        <Container>
+          <BannerImage />
+          <AuctionWidget />
+        </Container>
+      );
     }
     if (loggedIn && auctionEnded && isTokenOwner) {
       return <CrackadoomPlayer />;
     }
-    return <Web3Widget />;
+    return (
+      <Container>
+        <BannerImage />
+        <Web3Widget />
+      </Container>
+    );
   }
 
   return (
-    <DrizzleProvider options={drizzleOptions}>
-      <LoadingContainer>
-        <Layout>
-          <BannerImage />
-          {renderActionWidget()}
-          <Description />
-        </Layout>
-      </LoadingContainer>
-    </DrizzleProvider>
+    <Layout>
+      {renderActionWidget()}
+      <Description />
+    </Layout>
   );
 };
 
