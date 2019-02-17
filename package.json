@@ -13,6 +13,7 @@
   "author": "we, the ppl",
   "dependencies": {
     "openzeppelin-solidity": "2.1.2",
-    "truffle": "5.0.4"
+    "truffle": "5.0.4",
+    "truffle-hdwallet-provider": "^1.0.4"
   }
 }
