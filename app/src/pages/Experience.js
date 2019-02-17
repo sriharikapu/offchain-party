@@ -38,14 +38,10 @@ const Experience = () => {
   }
 
   return (
-    <DrizzleProvider options={drizzleOptions}>
-      <LoadingContainer>
-        <Layout>
-          {renderActionWidget()}
-          <Description />
-        </Layout>
-      </LoadingContainer>
-    </DrizzleProvider>
+    <Layout>
+      {renderActionWidget()}
+      <Description />
+    </Layout>
   );
 };
 
